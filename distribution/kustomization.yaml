@@ -2,6 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+- shared-config
+
   ## Common
 - argocd-applications/istio-operator.yaml
 - argocd-applications/istio.yaml
@@ -60,3 +62,7 @@ resources:
   # - argocd-applications/mlflow.yaml
   # - argocd-applications/experimental-pvcviewer-controller.yaml
   # - argocd-applications/experimental-volumes-web-app.yaml
+
+replacements:
+  - path: shared-config/replacements/git-repo-url.yaml
+  - path: shared-config/replacements/git-repo-target-revision.yaml
