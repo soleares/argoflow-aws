@@ -64,5 +64,7 @@ resources:
   # - argocd-applications/experimental-volumes-web-app.yaml
 
 replacements:
+- path: replacements/aws-region.yaml
+- path: replacements/cluster-name.yaml
 - path: replacements/git-repo-url.yaml
 - path: replacements/git-repo-target-revision.yaml

@@ -1,0 +1,15 @@
+source:
+  kind: ConfigMap
+  name: global-config
+  fieldPath: data.cluster-name
+targets:
+- select:
+    kind: Application
+    name: aws-load-balancer-controller
+  fieldPaths:
+  - spec.source.helm.parameters.[name=clusterName].value
+- select:
+    kind: Application
+    name: cluster-autoscaler
+  fieldPaths:
+  - spec.source.helm.parameters.[name=autoDiscovery.clusterName].value

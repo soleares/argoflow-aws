@@ -1,0 +1,20 @@
+source:
+  kind: ConfigMap
+  name: global-config
+  fieldPath: data.aws-region
+targets:
+- select:
+    kind: Application
+    name: aws-load-balancer-controller
+  fieldPaths:
+  - spec.source.helm.parameters.[name=region].value
+- select:
+    kind: Application
+    name: cluster-autoscaler
+  fieldPaths:
+  - spec.source.helm.parameters.[name=awsRegion].value
+- select:
+    kind: Application
+    name: external-dns
+  fieldPaths:
+  - spec.source.helm.parameters.[name=aws.region].value
