@@ -64,5 +64,5 @@ resources:
   # - argocd-applications/experimental-volumes-web-app.yaml
 
 replacements:
-  - path: shared-config/replacements/git-repo-url.yaml
-  - path: shared-config/replacements/git-repo-target-revision.yaml
+- path: replacements/git-repo-url.yaml
+- path: replacements/git-repo-target-revision.yaml
