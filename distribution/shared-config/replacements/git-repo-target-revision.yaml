@@ -1,0 +1,165 @@
+source:
+  kind: ConfigMap
+  name: global-config
+  fieldPath: data.git-repo-target-revision
+targets:
+- select:
+    kind: Application
+    name: argocd
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: central-dashboard
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: cert-manager
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: certificates
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: external-secrets
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: istio
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: istio-resources
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: jupyter-web-app
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: katib
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: kfserving
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: knative
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: kubecost-resources
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: kubeflow
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: mlflow
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: monitoring-resources
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: mpi-operator
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: mxnet-operator
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: namespace
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: notebook-controller
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: oidc-auth
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: pipelines
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: pod-defaults
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: profiles
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: profile-controller
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: pvcviewer-controller
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: pytorch-operator
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: roles
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: tensorboards-controller
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: tensorboards-web-app
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: tensorflow-operator
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: volumes-web-app
+  fieldPaths:
+  - spec.source.targetRevision
+- select:
+    kind: Application
+    name: xgboost-operator
+  fieldPaths:
+  - spec.source.targetRevision

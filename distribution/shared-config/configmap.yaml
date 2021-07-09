@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: global-config
+data:
+  git-repo-url: https://gitlab.my-company.com/kaas/at-argocd.git
+  git-repo-target-revision: 890123456789/my-cluster.my-domain
